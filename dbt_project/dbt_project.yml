@@ -1,0 +1,17 @@
+
+name: 'compute_iq'
+version: '1.0.0'
+config-version: 2
+
+profile: 'compute_iq'
+
+model-paths: ["models"]
+
+models:
+  compute_iq:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table

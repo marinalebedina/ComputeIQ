@@ -1,0 +1,28 @@
+
+version: 2
+
+models:
+  - name: stg_instances
+    columns:
+      - name: instance_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: hourly_cost
+        data_tests:
+          - not_null
+
+  - name: stg_instance_metrics
+    columns:
+      - name: instance_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_instances')
+                field: instance_id
+
+      - name: timestamp
+        data_tests:
+          - not_null

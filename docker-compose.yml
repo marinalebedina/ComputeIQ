@@ -1,0 +1,77 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: compute-iq-postgres
+    environment:
+      POSTGRES_USER: computeiq
+      POSTGRES_PASSWORD: computeiq_dev
+      POSTGRES_DB: computeiq
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U computeiq -d computeiq" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  airflow-init:
+    image: apache/airflow:3.1.3
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment: &airflow-env
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://computeiq:computeiq_dev@postgres:5432/airflow
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__CORE__EXECUTION_API_SERVER_URL: http://airflow-api:8080/execution/
+      AIRFLOW__API_AUTH__JWT_SECRET: "compute-iq-local-dev-jwt-secret-change-me"
+    volumes: &airflow-volumes
+        - ./dags:/opt/airflow/dags
+        - ./data:/opt/airflow/data
+        - airflow_logs:/opt/airflow/logs
+    command: db migrate
+    restart: "no"
+
+  airflow-api:
+    image: apache/airflow:3.1.3
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      <<: *airflow-env
+    volumes: *airflow-volumes
+    ports:
+      - "8080:8080"
+    command: api-server
+
+  airflow-scheduler:
+    image: apache/airflow:3.1.3
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      <<: *airflow-env
+    volumes: *airflow-volumes
+    command: scheduler
+
+  airflow-dag-processor:
+    image: apache/airflow:3.1.3
+    depends_on:
+      postgres:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully
+    environment:
+      <<: *airflow-env
+    volumes: *airflow-volumes
+    command: dag-processor
+
+volumes:
+  postgres_data:
+  airflow_logs:

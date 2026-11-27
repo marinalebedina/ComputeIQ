@@ -1,0 +1,1024 @@
+[0m15:46:07.981855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED66053FB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED64000920>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED63EC1610>]}
+
+
+============================== 15:46:07.988616 | ffa9fc04-0af3-4252-84f5-cf6ee89f8714 ==============================
+[0m15:46:07.988616 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m15:46:07.988616 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt debug --project-dir dbt_project --profiles-dir dbt_project', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt_project\\logs'}
+[0m15:46:07.988616 [debug] [MainThread]: Tracking: tracking
+[0m15:46:08.012437 [info ] [MainThread]: dbt version: 1.13.0-b1
+[0m15:46:08.012437 [info ] [MainThread]: python version: 3.12.4
+[0m15:46:08.012437 [info ] [MainThread]: python path: C:\Users\maril\PycharmProjects\compute-iq\.venv\Scripts\python.exe
+[0m15:46:08.012437 [info ] [MainThread]: os info: Windows-11-10.0.26300-SP0
+[0m15:46:08.074718 [info ] [MainThread]: Using profiles dir at dbt_project
+[0m15:46:08.074718 [info ] [MainThread]: Using profiles.yml file at dbt_project\profiles.yml
+[0m15:46:08.085305 [info ] [MainThread]: Using dbt_project.yml file at dbt_project\dbt_project.yml
+[0m15:46:08.086912 [info ] [MainThread]: adapter type: postgres
+[0m15:46:08.086912 [info ] [MainThread]: adapter version: 1.11.0
+[0m15:46:08.189598 [info ] [MainThread]: Configuration:
+[0m15:46:08.189598 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:46:08.189598 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:46:08.189598 [info ] [MainThread]: Required dependencies:
+[0m15:46:08.189598 [debug] [MainThread]: Executing "git --help"
+[0m15:46:08.255347 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:46:08.255347 [debug] [MainThread]: STDERR: "b''"
+[0m15:46:08.255347 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:46:08.255347 [info ] [MainThread]: Connection:
+[0m15:46:08.255347 [info ] [MainThread]:   host: 127.0.0.1
+[0m15:46:08.255347 [info ] [MainThread]:   port: 5433
+[0m15:46:08.255347 [info ] [MainThread]:   user: computeiq
+[0m15:46:08.255347 [info ] [MainThread]:   database: computeiq
+[0m15:46:08.255347 [info ] [MainThread]:   schema: analytics
+[0m15:46:08.262161 [info ] [MainThread]:   connect_timeout: 10
+[0m15:46:08.262800 [info ] [MainThread]:   role: None
+[0m15:46:08.262800 [info ] [MainThread]:   search_path: None
+[0m15:46:08.262800 [info ] [MainThread]:   keepalives_idle: 0
+[0m15:46:08.262800 [info ] [MainThread]:   sslmode: None
+[0m15:46:08.262800 [info ] [MainThread]:   sslcert: None
+[0m15:46:08.262800 [info ] [MainThread]:   sslkey: None
+[0m15:46:08.262800 [info ] [MainThread]:   sslrootcert: None
+[0m15:46:08.262800 [info ] [MainThread]:   application_name: dbt
+[0m15:46:08.262800 [info ] [MainThread]:   autocommit: False
+[0m15:46:08.262800 [info ] [MainThread]:   retries: 1
+[0m15:46:08.262800 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m15:46:08.521470 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m15:46:08.597828 [debug] [MainThread]: Using postgres connection "debug"
+[0m15:46:08.597828 [debug] [MainThread]: On debug: select 1 as id
+[0m15:46:08.597828 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:46:08.624908 [debug] [MainThread]: SQL status: SELECT 1 in 0.022 seconds
+[0m15:46:08.625983 [debug] [MainThread]: On debug: Close
+[0m15:46:08.626714 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:46:08.627219 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:46:08.627219 [debug] [MainThread]: Command `dbt debug` succeeded at 15:46:08.627219 after 0.85 seconds
+[0m15:46:08.628967 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:46:08.629593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED63966600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED63882BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001ED63E93740>]}
+[0m15:46:08.630642 [debug] [MainThread]: Flushing usage events
+[0m15:46:09.391312 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:46:45.979452 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3D4C2090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3949C4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3949EF30>]}
+
+
+============================== 15:46:45.989706 | 6871570d-2189-408c-aaac-1f50d9357f5e ==============================
+[0m15:46:45.989706 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m15:46:45.990888 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug --project-dir dbt_project --profiles-dir dbt_project', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'dbt_project\\logs'}
+[0m15:46:45.991888 [debug] [MainThread]: Tracking: tracking
+[0m15:46:46.018745 [info ] [MainThread]: dbt version: 1.13.0-b1
+[0m15:46:46.019746 [info ] [MainThread]: python version: 3.12.4
+[0m15:46:46.019746 [info ] [MainThread]: python path: C:\Users\maril\PycharmProjects\compute-iq\.venv\Scripts\python.exe
+[0m15:46:46.020745 [info ] [MainThread]: os info: Windows-11-10.0.26300-SP0
+[0m15:46:46.085406 [info ] [MainThread]: Using profiles dir at dbt_project
+[0m15:46:46.086405 [info ] [MainThread]: Using profiles.yml file at dbt_project\profiles.yml
+[0m15:46:46.088406 [info ] [MainThread]: Using dbt_project.yml file at dbt_project\dbt_project.yml
+[0m15:46:46.089406 [info ] [MainThread]: adapter type: postgres
+[0m15:46:46.089406 [info ] [MainThread]: adapter version: 1.11.0
+[0m15:46:46.198073 [info ] [MainThread]: Configuration:
+[0m15:46:46.199653 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:46:46.200665 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:46:46.201664 [info ] [MainThread]: Required dependencies:
+[0m15:46:46.202666 [debug] [MainThread]: Executing "git --help"
+[0m15:46:46.246730 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:46:46.246730 [debug] [MainThread]: STDERR: "b''"
+[0m15:46:46.247730 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:46:46.248728 [info ] [MainThread]: Connection:
+[0m15:46:46.248728 [info ] [MainThread]:   host: 127.0.0.1
+[0m15:46:46.248728 [info ] [MainThread]:   port: 5433
+[0m15:46:46.249731 [info ] [MainThread]:   user: computeiq
+[0m15:46:46.249731 [info ] [MainThread]:   database: computeiq
+[0m15:46:46.250731 [info ] [MainThread]:   schema: analytics
+[0m15:46:46.250731 [info ] [MainThread]:   connect_timeout: 10
+[0m15:46:46.250731 [info ] [MainThread]:   role: None
+[0m15:46:46.250731 [info ] [MainThread]:   search_path: None
+[0m15:46:46.252235 [info ] [MainThread]:   keepalives_idle: 0
+[0m15:46:46.252235 [info ] [MainThread]:   sslmode: None
+[0m15:46:46.253239 [info ] [MainThread]:   sslcert: None
+[0m15:46:46.253239 [info ] [MainThread]:   sslkey: None
+[0m15:46:46.253239 [info ] [MainThread]:   sslrootcert: None
+[0m15:46:46.254238 [info ] [MainThread]:   application_name: dbt
+[0m15:46:46.254238 [info ] [MainThread]:   autocommit: False
+[0m15:46:46.255238 [info ] [MainThread]:   retries: 1
+[0m15:46:46.255238 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m15:46:46.514317 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m15:46:46.582894 [debug] [MainThread]: Using postgres connection "debug"
+[0m15:46:46.583891 [debug] [MainThread]: On debug: select 1 as id
+[0m15:46:46.583891 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:46:46.604368 [debug] [MainThread]: SQL status: SELECT 1 in 0.020 seconds
+[0m15:46:46.605437 [debug] [MainThread]: On debug: Close
+[0m15:46:46.605973 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:46:46.607048 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:46:46.608125 [debug] [MainThread]: Command `dbt debug` succeeded at 15:46:46.607592 after 0.79 seconds
+[0m15:46:46.608125 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:46:46.608651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3D34EC60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3B265E20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3B188D70>]}
+[0m15:46:46.609182 [debug] [MainThread]: Flushing usage events
+[0m15:46:47.258730 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:55:47.548893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E19DB1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E60E1610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E60E1670>]}
+
+
+============================== 15:55:47.558968 | 1729fd8d-957d-4f32-a5e0-aaa8aab3f65f ==============================
+[0m15:55:47.558968 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m15:55:47.558968 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt_project', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --project-dir dbt_project --profiles-dir dbt_project --select stg_instances stg_instance_metrics', 'log_path': 'dbt_project\\logs'}
+[0m15:55:47.558968 [debug] [MainThread]: Tracking: tracking
+[0m15:55:47.776587 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E6304920>]}
+[0m15:55:47.838862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E454F0E0>]}
+[0m15:55:47.843137 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m15:55:48.109772 [debug] [MainThread]: checksum: a8c4bb450c464653e70ec0b788c367d1ac1c8630300c0abccba44bfa19b065b0, vars: {}, profile: compute_iq, target: dev, version: 1.13.0b1
+[0m15:55:48.109772 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m15:55:48.113861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E6146630>]}
+[0m15:55:49.296399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E690AF90>]}
+[0m15:55:49.389169 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m15:55:49.390185 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m15:55:49.437259 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m15:55:49.452898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E6B8DEE0>]}
+[0m15:55:49.452898 [info ] [MainThread]: Found 4 models, 2 sources, 477 macros
+[0m15:55:49.452898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E69B6420>]}
+[0m15:55:49.462120 [info ] [MainThread]: 
+[0m15:55:49.462120 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:55:49.462120 [info ] [MainThread]: 
+[0m15:55:49.462120 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:55:49.468718 [debug] [ThreadPool]: Acquiring new postgres connection 'list_computeiq'
+[0m15:55:49.534268 [debug] [ThreadPool]: Using postgres connection "list_computeiq"
+[0m15:55:49.534268 [debug] [ThreadPool]: On list_computeiq: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "list_computeiq"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:55:49.534268 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:55:49.569843 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.029 seconds
+[0m15:55:49.571386 [debug] [ThreadPool]: On list_computeiq: Close
+[0m15:55:49.571905 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_computeiq, now create_computeiq_analytics)
+[0m15:55:49.572434 [debug] [ThreadPool]: Creating schema "database: "computeiq"
+schema: "analytics"
+"
+[0m15:55:49.577164 [debug] [ThreadPool]: Using postgres connection "create_computeiq_analytics"
+[0m15:55:49.577164 [debug] [ThreadPool]: On create_computeiq_analytics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "create_computeiq_analytics"} */
+create schema if not exists "analytics"
+[0m15:55:49.577681 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:55:49.591059 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.013 seconds
+[0m15:55:49.592101 [debug] [ThreadPool]: On create_computeiq_analytics: COMMIT
+[0m15:55:49.592618 [debug] [ThreadPool]: Using postgres connection "create_computeiq_analytics"
+[0m15:55:49.592618 [debug] [ThreadPool]: On create_computeiq_analytics: COMMIT
+[0m15:55:49.594815 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m15:55:49.595338 [debug] [ThreadPool]: On create_computeiq_analytics: Close
+[0m15:55:49.596900 [debug] [ThreadPool]: Acquiring new postgres connection 'list_computeiq_analytics'
+[0m15:55:49.604200 [debug] [ThreadPool]: Using postgres connection "list_computeiq_analytics"
+[0m15:55:49.604708 [debug] [ThreadPool]: On list_computeiq_analytics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "list_computeiq_analytics"} */
+select
+      'computeiq' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'computeiq' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'computeiq' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'computeiq' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m15:55:49.604708 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:55:49.626799 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.022 seconds
+[0m15:55:49.627856 [debug] [ThreadPool]: On list_computeiq_analytics: ROLLBACK
+[0m15:55:49.628902 [debug] [ThreadPool]: On list_computeiq_analytics: Close
+[0m15:55:49.632557 [debug] [MainThread]: Using postgres connection "master"
+[0m15:55:49.633079 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:55:49.633597 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:55:49.648797 [debug] [MainThread]: SQL status: SELECT 0 in 0.015 seconds
+[0m15:55:49.649327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E6ACD8B0>]}
+[0m15:55:49.649327 [debug] [MainThread]: On master: ROLLBACK
+[0m15:55:49.651584 [debug] [MainThread]: On master: COMMIT
+[0m15:55:49.652107 [debug] [MainThread]: Using postgres connection "master"
+[0m15:55:49.652107 [debug] [MainThread]: On master: COMMIT
+[0m15:55:49.653673 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m15:55:49.654194 [debug] [MainThread]: On master: Close
+[0m15:55:49.661174 [debug] [Thread-1 (]: Began running node model.compute_iq.stg_instance_metrics
+[0m15:55:49.661703 [debug] [Thread-2 (]: Began running node model.compute_iq.stg_instances
+[0m15:55:49.662231 [info ] [Thread-1 (]: 1 of 2 START sql view model analytics.stg_instance_metrics ..................... [RUN]
+[0m15:55:49.663289 [info ] [Thread-2 (]: 2 of 2 START sql view model analytics.stg_instances ............................ [RUN]
+[0m15:55:49.664354 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.compute_iq.stg_instance_metrics'
+[0m15:55:49.664882 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.compute_iq.stg_instances'
+[0m15:55:49.665410 [debug] [Thread-1 (]: Began compiling node model.compute_iq.stg_instance_metrics
+[0m15:55:49.665941 [debug] [Thread-2 (]: Began compiling node model.compute_iq.stg_instances
+[0m15:55:49.674437 [debug] [Thread-1 (]: Writing injected SQL for node "model.compute_iq.stg_instance_metrics"
+[0m15:55:49.674437 [debug] [Thread-2 (]: Writing injected SQL for node "model.compute_iq.stg_instances"
+[0m15:55:49.679968 [debug] [Thread-1 (]: Began executing node model.compute_iq.stg_instance_metrics
+[0m15:55:49.687250 [debug] [Thread-2 (]: Began executing node model.compute_iq.stg_instances
+[0m15:55:49.711101 [debug] [Thread-1 (]: Writing runtime sql for node "model.compute_iq.stg_instance_metrics"
+[0m15:55:49.711101 [debug] [Thread-2 (]: Writing runtime sql for node "model.compute_iq.stg_instances"
+[0m15:55:49.721247 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m15:55:49.721247 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m15:55:49.721247 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instance_metrics"} */
+
+  create view "computeiq"."analytics"."stg_instance_metrics__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    instance_id,
+    timestamp,
+    cpu_util,
+    gpu_util
+FROM "computeiq"."raw"."instance_metrics"
+  );
+[0m15:55:49.721247 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instances"} */
+
+  create view "computeiq"."analytics"."stg_instances__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    instance_id,
+    instance_type,
+    cpu_count,
+    gpu_count,
+    hourly_cost
+FROM "computeiq"."raw"."instances"
+  );
+[0m15:55:49.721247 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:55:49.721247 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:55:49.739887 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.015 seconds
+[0m15:55:49.745589 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m15:55:49.747256 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instances"} */
+alter table "computeiq"."analytics"."stg_instances__dbt_tmp" rename to "stg_instances"
+[0m15:55:49.748855 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.025 seconds
+[0m15:55:49.749379 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m15:55:49.752589 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m15:55:49.765756 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: COMMIT
+[0m15:55:49.765756 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instance_metrics"} */
+alter table "computeiq"."analytics"."stg_instance_metrics__dbt_tmp" rename to "stg_instance_metrics"
+[0m15:55:49.773012 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m15:55:49.773662 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: COMMIT
+[0m15:55:49.774168 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m15:55:49.775890 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: COMMIT
+[0m15:55:49.776413 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m15:55:49.776931 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m15:55:49.782208 [debug] [Thread-2 (]: Applying DROP to: "computeiq"."analytics"."stg_instances__dbt_backup"
+[0m15:55:49.782728 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: COMMIT
+[0m15:55:49.786881 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m15:55:49.788666 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instances"} */
+drop view if exists "computeiq"."analytics"."stg_instances__dbt_backup" cascade
+[0m15:55:49.789960 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m15:55:49.790465 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m15:55:49.792036 [debug] [Thread-1 (]: Applying DROP to: "computeiq"."analytics"."stg_instance_metrics__dbt_backup"
+[0m15:55:49.794098 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: Close
+[0m15:55:49.795142 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m15:55:49.796693 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instance_metrics"} */
+drop view if exists "computeiq"."analytics"."stg_instance_metrics__dbt_backup" cascade
+[0m15:55:49.798365 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m15:55:49.799405 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: Close
+[0m15:55:49.799925 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E1AD7440>]}
+[0m15:55:49.800445 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1729fd8d-957d-4f32-a5e0-aaa8aab3f65f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E6E08B30>]}
+[0m15:55:49.801493 [info ] [Thread-2 (]: 2 of 2 OK created sql view model analytics.stg_instances ....................... [[32mCREATE VIEW[0m in 0.13s]
+[0m15:55:49.803066 [debug] [Thread-2 (]: Finished running node model.compute_iq.stg_instances
+[0m15:55:49.802018 [info ] [Thread-1 (]: 1 of 2 OK created sql view model analytics.stg_instance_metrics ................ [[32mCREATE VIEW[0m in 0.14s]
+[0m15:55:49.804100 [debug] [Thread-1 (]: Finished running node model.compute_iq.stg_instance_metrics
+[0m15:55:49.805149 [debug] [MainThread]: On master: COMMIT
+[0m15:55:49.805666 [debug] [MainThread]: Using postgres connection "master"
+[0m15:55:49.806189 [debug] [MainThread]: On master: COMMIT
+[0m15:55:49.806189 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:55:49.818198 [debug] [MainThread]: SQL status: COMMIT in 0.012 seconds
+[0m15:55:49.818722 [debug] [MainThread]: On master: Close
+[0m15:55:49.819249 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:55:49.819770 [debug] [MainThread]: Connection 'create_computeiq_analytics' was properly closed.
+[0m15:55:49.820290 [debug] [MainThread]: Connection 'list_computeiq_analytics' was properly closed.
+[0m15:55:49.820290 [debug] [MainThread]: Connection 'model.compute_iq.stg_instance_metrics' was properly closed.
+[0m15:55:49.820875 [debug] [MainThread]: Connection 'model.compute_iq.stg_instances' was properly closed.
+[0m15:55:49.820875 [info ] [MainThread]: 
+[0m15:55:49.821398 [info ] [MainThread]: Finished running 2 view models in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m15:55:49.822444 [debug] [MainThread]: Command end result
+[0m15:55:49.858792 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m15:55:49.858792 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m15:55:49.866971 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m15:55:49.877266 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt_project\target\run_results.json
+[0m15:55:49.877266 [info ] [MainThread]: 
+[0m15:55:49.877266 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:55:49.877266 [info ] [MainThread]: 
+[0m15:55:49.877266 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m15:55:49.877266 [debug] [MainThread]: Command `dbt run` succeeded at 15:55:49.877266 after 2.54 seconds
+[0m15:55:49.877266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E454F230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E61C20F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000246E3676C00>]}
+[0m15:55:49.877266 [debug] [MainThread]: Flushing usage events
+[0m15:55:50.597950 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:01:26.059056 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C322918500>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3200A7DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3233C27E0>]}
+
+
+============================== 16:01:26.062666 | 3d69b71e-e778-421d-abfb-e3eded228b6c ==============================
+[0m16:01:26.062666 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m16:01:26.062666 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt test --project-dir dbt_project --profiles-dir dbt_project', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'dbt_project\\logs'}
+[0m16:01:26.062666 [debug] [MainThread]: Tracking: tracking
+[0m16:01:26.280307 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3d69b71e-e778-421d-abfb-e3eded228b6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C322E38D40>]}
+[0m16:01:26.343519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3d69b71e-e778-421d-abfb-e3eded228b6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C325139B50>]}
+[0m16:01:26.350185 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m16:01:26.612924 [debug] [MainThread]: checksum: a8c4bb450c464653e70ec0b788c367d1ac1c8630300c0abccba44bfa19b065b0, vars: {}, profile: compute_iq, target: dev, version: 1.13.0b1
+[0m16:01:26.758531 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m16:01:26.758531 [debug] [MainThread]: Partial parsing: added file: compute_iq://models\staging\schema.yml
+[0m16:01:27.250719 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3d69b71e-e778-421d-abfb-e3eded228b6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C32545F7A0>]}
+[0m16:01:27.366266 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m16:01:27.366266 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m16:01:27.418702 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m16:01:27.449471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3d69b71e-e778-421d-abfb-e3eded228b6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C325B6DDC0>]}
+[0m16:01:27.451560 [info ] [MainThread]: Found 4 models, 6 data tests, 2 sources, 477 macros
+[0m16:01:27.451560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d69b71e-e778-421d-abfb-e3eded228b6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C32545D0D0>]}
+[0m16:01:27.456159 [info ] [MainThread]: 
+[0m16:01:27.456159 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:01:27.456159 [info ] [MainThread]: 
+[0m16:01:27.456159 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:01:27.461473 [debug] [ThreadPool]: Acquiring new postgres connection 'list_computeiq_analytics'
+[0m16:01:27.536639 [debug] [ThreadPool]: Using postgres connection "list_computeiq_analytics"
+[0m16:01:27.536639 [debug] [ThreadPool]: On list_computeiq_analytics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "list_computeiq_analytics"} */
+select
+      'computeiq' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'computeiq' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'computeiq' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'computeiq' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m16:01:27.536639 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:01:27.570305 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.030 seconds
+[0m16:01:27.571852 [debug] [ThreadPool]: On list_computeiq_analytics: ROLLBACK
+[0m16:01:27.572885 [debug] [ThreadPool]: On list_computeiq_analytics: Close
+[0m16:01:27.577591 [debug] [MainThread]: Using postgres connection "master"
+[0m16:01:27.578112 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:01:27.578640 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:01:27.593339 [debug] [MainThread]: SQL status: SELECT 2 in 0.014 seconds
+[0m16:01:27.593339 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d69b71e-e778-421d-abfb-e3eded228b6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C325343EC0>]}
+[0m16:01:27.593339 [debug] [MainThread]: On master: ROLLBACK
+[0m16:01:27.596070 [debug] [MainThread]: On master: COMMIT
+[0m16:01:27.596598 [debug] [MainThread]: Using postgres connection "master"
+[0m16:01:27.596598 [debug] [MainThread]: On master: COMMIT
+[0m16:01:27.598163 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:01:27.598775 [debug] [MainThread]: On master: Close
+[0m16:01:27.604031 [debug] [Thread-1 (]: Began running node test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848
+[0m16:01:27.604554 [debug] [Thread-2 (]: Began running node test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156
+[0m16:01:27.605079 [debug] [Thread-3 (]: Began running node test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1
+[0m16:01:27.605079 [debug] [Thread-4 (]: Began running node test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c
+[0m16:01:27.605588 [info ] [Thread-1 (]: 1 of 6 START test not_null_stg_instance_metrics_instance_id .................... [RUN]
+[0m16:01:27.606120 [info ] [Thread-2 (]: 2 of 6 START test not_null_stg_instance_metrics_timestamp ...................... [RUN]
+[0m16:01:27.606642 [info ] [Thread-3 (]: 3 of 6 START test not_null_stg_instances_hourly_cost ........................... [RUN]
+[0m16:01:27.607690 [info ] [Thread-4 (]: 4 of 6 START test not_null_stg_instances_instance_id ........................... [RUN]
+[0m16:01:27.608214 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848'
+[0m16:01:27.608740 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156'
+[0m16:01:27.609260 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1'
+[0m16:01:27.609782 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c'
+[0m16:01:27.610305 [debug] [Thread-1 (]: Began compiling node test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848
+[0m16:01:27.610830 [debug] [Thread-2 (]: Began compiling node test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156
+[0m16:01:27.611358 [debug] [Thread-3 (]: Began compiling node test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1
+[0m16:01:27.611879 [debug] [Thread-4 (]: Began compiling node test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c
+[0m16:01:27.626169 [debug] [Thread-1 (]: Writing injected SQL for node "test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848"
+[0m16:01:27.629861 [debug] [Thread-2 (]: Writing injected SQL for node "test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156"
+[0m16:01:27.636346 [debug] [Thread-3 (]: Writing injected SQL for node "test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1"
+[0m16:01:27.646508 [debug] [Thread-4 (]: Writing injected SQL for node "test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c"
+[0m16:01:27.646508 [debug] [Thread-3 (]: Began executing node test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1
+[0m16:01:27.662045 [debug] [Thread-1 (]: Began executing node test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848
+[0m16:01:27.667472 [debug] [Thread-3 (]: Writing runtime sql for node "test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1"
+[0m16:01:27.667472 [debug] [Thread-1 (]: Writing runtime sql for node "test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848"
+[0m16:01:27.667472 [debug] [Thread-4 (]: Began executing node test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c
+[0m16:01:27.667472 [debug] [Thread-2 (]: Began executing node test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156
+[0m16:01:27.667472 [debug] [Thread-4 (]: Writing runtime sql for node "test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c"
+[0m16:01:27.674465 [debug] [Thread-2 (]: Writing runtime sql for node "test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156"
+[0m16:01:27.674465 [debug] [Thread-1 (]: Using postgres connection "test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848"
+[0m16:01:27.674465 [debug] [Thread-1 (]: On test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select instance_id
+from "computeiq"."analytics"."stg_instance_metrics"
+where instance_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:01:27.674465 [debug] [Thread-3 (]: Using postgres connection "test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1"
+[0m16:01:27.674465 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:01:27.674465 [debug] [Thread-4 (]: Using postgres connection "test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c"
+[0m16:01:27.677979 [debug] [Thread-3 (]: On test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select hourly_cost
+from "computeiq"."analytics"."stg_instances"
+where hourly_cost is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:01:27.678705 [debug] [Thread-2 (]: Using postgres connection "test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156"
+[0m16:01:27.678705 [debug] [Thread-4 (]: On test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select instance_id
+from "computeiq"."analytics"."stg_instances"
+where instance_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:01:27.680392 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m16:01:27.680953 [debug] [Thread-2 (]: On test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select timestamp
+from "computeiq"."analytics"."stg_instance_metrics"
+where timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:01:27.680953 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:01:27.682217 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:01:27.696446 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.019 seconds
+[0m16:01:27.700829 [debug] [Thread-1 (]: On test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848: ROLLBACK
+[0m16:01:27.702391 [debug] [Thread-1 (]: On test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848: Close
+[0m16:01:27.703963 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.023 seconds
+[0m16:01:27.703963 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.023 seconds
+[0m16:01:27.703434 [info ] [Thread-1 (]: 1 of 6 PASS not_null_stg_instance_metrics_instance_id .......................... [[32mPASS[0m in 0.10s]
+[0m16:01:27.706064 [debug] [Thread-3 (]: On test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1: ROLLBACK
+[0m16:01:27.707102 [debug] [Thread-4 (]: On test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c: ROLLBACK
+[0m16:01:27.707624 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.026 seconds
+[0m16:01:27.708142 [debug] [Thread-1 (]: Finished running node test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848
+[0m16:01:27.710117 [debug] [Thread-2 (]: On test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156: ROLLBACK
+[0m16:01:27.710117 [debug] [Thread-3 (]: On test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1: Close
+[0m16:01:27.710639 [debug] [Thread-4 (]: On test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c: Close
+[0m16:01:27.711154 [debug] [Thread-1 (]: Began running node test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781
+[0m16:01:27.712203 [info ] [Thread-3 (]: 3 of 6 PASS not_null_stg_instances_hourly_cost ................................. [[32mPASS[0m in 0.10s]
+[0m16:01:27.712730 [debug] [Thread-2 (]: On test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156: Close
+[0m16:01:27.713265 [info ] [Thread-4 (]: 4 of 6 PASS not_null_stg_instances_instance_id ................................. [[32mPASS[0m in 0.10s]
+[0m16:01:27.713788 [info ] [Thread-1 (]: 5 of 6 START test relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_  [RUN]
+[0m16:01:27.714317 [debug] [Thread-3 (]: Finished running node test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1
+[0m16:01:27.715886 [debug] [Thread-4 (]: Finished running node test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c
+[0m16:01:27.715365 [info ] [Thread-2 (]: 2 of 6 PASS not_null_stg_instance_metrics_timestamp ............................ [[32mPASS[0m in 0.11s]
+[0m16:01:27.716410 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.compute_iq.not_null_stg_instance_metrics_instance_id.1755c3e848, now test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781)
+[0m16:01:27.716933 [debug] [Thread-3 (]: Began running node test.compute_iq.unique_stg_instances_instance_id.130b6543dd
+[0m16:01:27.717975 [debug] [Thread-2 (]: Finished running node test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156
+[0m16:01:27.717975 [debug] [Thread-1 (]: Began compiling node test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781
+[0m16:01:27.717975 [info ] [Thread-3 (]: 6 of 6 START test unique_stg_instances_instance_id ............................. [RUN]
+[0m16:01:27.730420 [debug] [Thread-1 (]: Writing injected SQL for node "test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781"
+[0m16:01:27.730420 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.compute_iq.not_null_stg_instances_hourly_cost.7e447184c1, now test.compute_iq.unique_stg_instances_instance_id.130b6543dd)
+[0m16:01:27.730420 [debug] [Thread-3 (]: Began compiling node test.compute_iq.unique_stg_instances_instance_id.130b6543dd
+[0m16:01:27.730420 [debug] [Thread-3 (]: Writing injected SQL for node "test.compute_iq.unique_stg_instances_instance_id.130b6543dd"
+[0m16:01:27.740691 [debug] [Thread-1 (]: Began executing node test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781
+[0m16:01:27.740691 [debug] [Thread-1 (]: Writing runtime sql for node "test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781"
+[0m16:01:27.740691 [debug] [Thread-3 (]: Began executing node test.compute_iq.unique_stg_instances_instance_id.130b6543dd
+[0m16:01:27.740691 [debug] [Thread-3 (]: Writing runtime sql for node "test.compute_iq.unique_stg_instances_instance_id.130b6543dd"
+[0m16:01:27.740691 [debug] [Thread-1 (]: Using postgres connection "test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781"
+[0m16:01:27.740691 [debug] [Thread-1 (]: On test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select instance_id as from_field
+    from "computeiq"."analytics"."stg_instance_metrics"
+    where instance_id is not null
+),
+
+parent as (
+    select instance_id as to_field
+    from "computeiq"."analytics"."stg_instances"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:01:27.740691 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:01:27.740691 [debug] [Thread-3 (]: Using postgres connection "test.compute_iq.unique_stg_instances_instance_id.130b6543dd"
+[0m16:01:27.740691 [debug] [Thread-3 (]: On test.compute_iq.unique_stg_instances_instance_id.130b6543dd: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "test.compute_iq.unique_stg_instances_instance_id.130b6543dd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    instance_id as unique_field,
+    count(*) as n_records
+
+from "computeiq"."analytics"."stg_instances"
+where instance_id is not null
+group by instance_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m16:01:27.748859 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m16:01:27.763879 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.015 seconds
+[0m16:01:27.765423 [debug] [Thread-3 (]: On test.compute_iq.unique_stg_instances_instance_id.130b6543dd: ROLLBACK
+[0m16:01:27.766467 [debug] [Thread-3 (]: On test.compute_iq.unique_stg_instances_instance_id.130b6543dd: Close
+[0m16:01:27.767509 [info ] [Thread-3 (]: 6 of 6 PASS unique_stg_instances_instance_id ................................... [[32mPASS[0m in 0.04s]
+[0m16:01:27.768045 [debug] [Thread-3 (]: Finished running node test.compute_iq.unique_stg_instances_instance_id.130b6543dd
+[0m16:01:27.773859 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.027 seconds
+[0m16:01:27.775428 [debug] [Thread-1 (]: On test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781: ROLLBACK
+[0m16:01:27.776454 [debug] [Thread-1 (]: On test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781: Close
+[0m16:01:27.777500 [info ] [Thread-1 (]: 5 of 6 PASS relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_  [[32mPASS[0m in 0.06s]
+[0m16:01:27.778025 [debug] [Thread-1 (]: Finished running node test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781
+[0m16:01:27.779589 [debug] [MainThread]: On master: COMMIT
+[0m16:01:27.780127 [debug] [MainThread]: Using postgres connection "master"
+[0m16:01:27.780649 [debug] [MainThread]: On master: COMMIT
+[0m16:01:27.780649 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:01:27.793395 [debug] [MainThread]: SQL status: COMMIT in 0.012 seconds
+[0m16:01:27.793915 [debug] [MainThread]: On master: Close
+[0m16:01:27.794438 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:01:27.794438 [debug] [MainThread]: Connection 'list_computeiq_analytics' was properly closed.
+[0m16:01:27.794961 [debug] [MainThread]: Connection 'test.compute_iq.relationships_stg_instance_metrics_instance_id__instance_id__ref_stg_instances_.20fa366781' was properly closed.
+[0m16:01:27.795483 [debug] [MainThread]: Connection 'test.compute_iq.not_null_stg_instance_metrics_timestamp.dff0def156' was properly closed.
+[0m16:01:27.795483 [debug] [MainThread]: Connection 'test.compute_iq.unique_stg_instances_instance_id.130b6543dd' was properly closed.
+[0m16:01:27.796001 [debug] [MainThread]: Connection 'test.compute_iq.not_null_stg_instances_instance_id.1f82d2cd9c' was properly closed.
+[0m16:01:27.796410 [info ] [MainThread]: 
+[0m16:01:27.796914 [info ] [MainThread]: Finished running 6 data tests in 0 hours 0 minutes and 0.34 seconds (0.34s).
+[0m16:01:27.798479 [debug] [MainThread]: Command end result
+[0m16:01:27.834849 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m16:01:27.836858 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m16:01:27.838865 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m16:01:27.847543 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt_project\target\run_results.json
+[0m16:01:27.847543 [info ] [MainThread]: 
+[0m16:01:27.847543 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:01:27.847543 [info ] [MainThread]: 
+[0m16:01:27.847543 [info ] [MainThread]: Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=6
+[0m16:01:27.850643 [debug] [MainThread]: Command `dbt test` succeeded at 16:01:27.850643 after 1.99 seconds
+[0m16:01:27.850643 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C3233C27E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C323457620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C323456540>]}
+[0m16:01:27.850643 [debug] [MainThread]: Flushing usage events
+[0m16:01:28.553346 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:03:56.580087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169FF655A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169825BFDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016983D82090>]}
+
+
+============================== 16:03:56.589139 | 12b6c0bd-ba01-4e38-b28d-a957aa7331d8 ==============================
+[0m16:03:56.589139 [info ] [MainThread]: Running with dbt=1.13.0-b1
+[0m16:03:56.589139 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'maximum_seed_size_mib': '1', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'dbt_project', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --project-dir dbt_project --profiles-dir dbt_project --select +int_instance_hourly_costs', 'log_path': 'dbt_project\\logs'}
+[0m16:03:56.589139 [debug] [MainThread]: Tracking: tracking
+[0m16:03:56.818007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001698639C740>]}
+[0m16:03:56.889670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016983D82840>]}
+[0m16:03:56.896648 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m16:03:57.170041 [debug] [MainThread]: checksum: a8c4bb450c464653e70ec0b788c367d1ac1c8630300c0abccba44bfa19b065b0, vars: {}, profile: compute_iq, target: dev, version: 1.13.0b1
+[0m16:03:57.335454 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:03:57.335454 [debug] [MainThread]: Partial parsing: updated file: compute_iq://models\intermediate\int_instance_hourly_costs.sql
+[0m16:03:57.721947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016982186390>]}
+[0m16:03:57.829215 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m16:03:57.829215 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m16:03:57.870275 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m16:03:57.892548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016983E14800>]}
+[0m16:03:57.892548 [info ] [MainThread]: Found 4 models, 6 data tests, 2 sources, 477 macros
+[0m16:03:57.892548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001698665B620>]}
+[0m16:03:57.892548 [info ] [MainThread]: 
+[0m16:03:57.892548 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m16:03:57.902010 [info ] [MainThread]: 
+[0m16:03:57.902010 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:03:57.902010 [debug] [ThreadPool]: Acquiring new postgres connection 'list_computeiq'
+[0m16:03:57.984267 [debug] [ThreadPool]: Using postgres connection "list_computeiq"
+[0m16:03:57.984267 [debug] [ThreadPool]: On list_computeiq: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "list_computeiq"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:03:57.984267 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:03:58.003648 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.018 seconds
+[0m16:03:58.005226 [debug] [ThreadPool]: On list_computeiq: Close
+[0m16:03:58.006330 [debug] [ThreadPool]: Acquiring new postgres connection 'list_computeiq_analytics'
+[0m16:03:58.012214 [debug] [ThreadPool]: Using postgres connection "list_computeiq_analytics"
+[0m16:03:58.012733 [debug] [ThreadPool]: On list_computeiq_analytics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "list_computeiq_analytics"} */
+select
+      'computeiq' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'computeiq' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'computeiq' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+    union all
+    select distinct
+     'computeiq' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'analytics'
+  
+[0m16:03:58.013256 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:03:58.057233 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.044 seconds
+[0m16:03:58.058795 [debug] [ThreadPool]: On list_computeiq_analytics: ROLLBACK
+[0m16:03:58.059832 [debug] [ThreadPool]: On list_computeiq_analytics: Close
+[0m16:03:58.064121 [debug] [MainThread]: Using postgres connection "master"
+[0m16:03:58.064651 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m16:03:58.065290 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:03:58.079022 [debug] [MainThread]: SQL status: SELECT 2 in 0.014 seconds
+[0m16:03:58.080671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016983E14260>]}
+[0m16:03:58.081189 [debug] [MainThread]: On master: ROLLBACK
+[0m16:03:58.082235 [debug] [MainThread]: On master: COMMIT
+[0m16:03:58.082760 [debug] [MainThread]: Using postgres connection "master"
+[0m16:03:58.082760 [debug] [MainThread]: On master: COMMIT
+[0m16:03:58.084322 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m16:03:58.084846 [debug] [MainThread]: On master: Close
+[0m16:03:58.090057 [debug] [Thread-1 (]: Began running node model.compute_iq.stg_instance_metrics
+[0m16:03:58.090586 [debug] [Thread-2 (]: Began running node model.compute_iq.stg_instances
+[0m16:03:58.091106 [info ] [Thread-1 (]: 1 of 3 START sql view model analytics.stg_instance_metrics ..................... [RUN]
+[0m16:03:58.091633 [info ] [Thread-2 (]: 2 of 3 START sql view model analytics.stg_instances ............................ [RUN]
+[0m16:03:58.092688 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.compute_iq.stg_instance_metrics'
+[0m16:03:58.093214 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.compute_iq.stg_instances'
+[0m16:03:58.093732 [debug] [Thread-1 (]: Began compiling node model.compute_iq.stg_instance_metrics
+[0m16:03:58.094249 [debug] [Thread-2 (]: Began compiling node model.compute_iq.stg_instances
+[0m16:03:58.097891 [debug] [Thread-1 (]: Writing injected SQL for node "model.compute_iq.stg_instance_metrics"
+[0m16:03:58.097891 [debug] [Thread-2 (]: Writing injected SQL for node "model.compute_iq.stg_instances"
+[0m16:03:58.097891 [debug] [Thread-1 (]: Began executing node model.compute_iq.stg_instance_metrics
+[0m16:03:58.127074 [debug] [Thread-2 (]: Began executing node model.compute_iq.stg_instances
+[0m16:03:58.129144 [debug] [Thread-1 (]: Writing runtime sql for node "model.compute_iq.stg_instance_metrics"
+[0m16:03:58.139253 [debug] [Thread-2 (]: Writing runtime sql for node "model.compute_iq.stg_instances"
+[0m16:03:58.139253 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m16:03:58.142896 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instance_metrics"} */
+
+  create view "computeiq"."analytics"."stg_instance_metrics__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    instance_id,
+    timestamp,
+    cpu_util,
+    gpu_util
+FROM "computeiq"."raw"."instance_metrics"
+  );
+[0m16:03:58.142896 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m16:03:58.142896 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m16:03:58.142896 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instances"} */
+
+  create view "computeiq"."analytics"."stg_instances__dbt_tmp"
+    
+    
+  as (
+    SELECT
+    instance_id,
+    instance_type,
+    cpu_count,
+    gpu_count,
+    hourly_cost
+FROM "computeiq"."raw"."instances"
+  );
+[0m16:03:58.144972 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m16:03:58.162479 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.019 seconds
+[0m16:03:58.163009 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.018 seconds
+[0m16:03:58.168724 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m16:03:58.170783 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m16:03:58.171304 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instance_metrics"} */
+alter table "computeiq"."analytics"."stg_instance_metrics" rename to "stg_instance_metrics__dbt_backup"
+[0m16:03:58.171823 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instances"} */
+alter table "computeiq"."analytics"."stg_instances" rename to "stg_instances__dbt_backup"
+[0m16:03:58.172867 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:03:58.173392 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:03:58.174521 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m16:03:58.177433 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m16:03:58.178279 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instance_metrics"} */
+alter table "computeiq"."analytics"."stg_instance_metrics__dbt_tmp" rename to "stg_instance_metrics"
+[0m16:03:58.178279 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instances"} */
+alter table "computeiq"."analytics"."stg_instances__dbt_tmp" rename to "stg_instances"
+[0m16:03:58.179678 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:03:58.180428 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m16:03:58.198553 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: COMMIT
+[0m16:03:58.200561 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: COMMIT
+[0m16:03:58.200896 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m16:03:58.201415 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m16:03:58.201415 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: COMMIT
+[0m16:03:58.202419 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: COMMIT
+[0m16:03:58.206992 [debug] [Thread-2 (]: SQL status: COMMIT in 0.004 seconds
+[0m16:03:58.213270 [debug] [Thread-2 (]: Applying DROP to: "computeiq"."analytics"."stg_instances__dbt_backup"
+[0m16:03:58.213787 [debug] [Thread-1 (]: SQL status: COMMIT in 0.011 seconds
+[0m16:03:58.218530 [debug] [Thread-2 (]: Using postgres connection "model.compute_iq.stg_instances"
+[0m16:03:58.220052 [debug] [Thread-1 (]: Applying DROP to: "computeiq"."analytics"."stg_instance_metrics__dbt_backup"
+[0m16:03:58.220052 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instances"} */
+drop view if exists "computeiq"."analytics"."stg_instances__dbt_backup" cascade
+[0m16:03:58.221742 [debug] [Thread-1 (]: Using postgres connection "model.compute_iq.stg_instance_metrics"
+[0m16:03:58.222183 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.stg_instance_metrics"} */
+drop view if exists "computeiq"."analytics"."stg_instance_metrics__dbt_backup" cascade
+[0m16:03:58.227034 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.005 seconds
+[0m16:03:58.228065 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.005 seconds
+[0m16:03:58.232954 [debug] [Thread-2 (]: On model.compute_iq.stg_instances: Close
+[0m16:03:58.235341 [debug] [Thread-1 (]: On model.compute_iq.stg_instance_metrics: Close
+[0m16:03:58.238832 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000169FFE37530>]}
+[0m16:03:58.239554 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001698696D700>]}
+[0m16:03:58.240430 [info ] [Thread-2 (]: 2 of 3 OK created sql view model analytics.stg_instances ....................... [[32mCREATE VIEW[0m in 0.14s]
+[0m16:03:58.240934 [info ] [Thread-1 (]: 1 of 3 OK created sql view model analytics.stg_instance_metrics ................ [[32mCREATE VIEW[0m in 0.15s]
+[0m16:03:58.241976 [debug] [Thread-2 (]: Finished running node model.compute_iq.stg_instances
+[0m16:03:58.241976 [debug] [Thread-1 (]: Finished running node model.compute_iq.stg_instance_metrics
+[0m16:03:58.243504 [debug] [Thread-4 (]: Began running node model.compute_iq.int_instance_hourly_costs
+[0m16:03:58.244555 [info ] [Thread-4 (]: 3 of 3 START sql incremental model analytics.int_instance_hourly_costs ......... [RUN]
+[0m16:03:58.245074 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.compute_iq.int_instance_hourly_costs'
+[0m16:03:58.245594 [debug] [Thread-4 (]: Began compiling node model.compute_iq.int_instance_hourly_costs
+[0m16:03:58.248778 [debug] [Thread-4 (]: Writing injected SQL for node "model.compute_iq.int_instance_hourly_costs"
+[0m16:03:58.249927 [debug] [Thread-4 (]: Began executing node model.compute_iq.int_instance_hourly_costs
+[0m16:03:58.292383 [debug] [Thread-4 (]: Writing runtime sql for node "model.compute_iq.int_instance_hourly_costs"
+[0m16:03:58.294029 [debug] [Thread-4 (]: Using postgres connection "model.compute_iq.int_instance_hourly_costs"
+[0m16:03:58.295030 [debug] [Thread-4 (]: On model.compute_iq.int_instance_hourly_costs: /* {"app": "dbt", "dbt_version": "1.13.0b1", "profile_name": "compute_iq", "target_name": "dev", "node_id": "model.compute_iq.int_instance_hourly_costs"} */
+
+      
+  
+    
+
+  create  table "computeiq"."analytics"."int_instance_hourly_costs"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    m.instance_id,
+    m.timestamp,
+    i.instance_type,
+    i.cpu_count,
+    i.gpu_count,
+    i.hourly_cost
+FROM "computeiq"."analytics"."stg_instance_metrics" AS m
+LEFT JOIN "computeiq"."analytics"."stg_instances" AS i
+    ON m.instance_id = i.instance_id
+
+
+  );
+  
+  
+[0m16:03:58.295030 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m16:03:58.366074 [debug] [Thread-4 (]: SQL status: SELECT 72000 in 0.072 seconds
+[0m16:03:58.375671 [debug] [Thread-4 (]: On model.compute_iq.int_instance_hourly_costs: COMMIT
+[0m16:03:58.376759 [debug] [Thread-4 (]: Using postgres connection "model.compute_iq.int_instance_hourly_costs"
+[0m16:03:58.377084 [debug] [Thread-4 (]: On model.compute_iq.int_instance_hourly_costs: COMMIT
+[0m16:03:58.417097 [debug] [Thread-4 (]: SQL status: COMMIT in 0.039 seconds
+[0m16:03:58.418266 [debug] [Thread-4 (]: On model.compute_iq.int_instance_hourly_costs: Close
+[0m16:03:58.419795 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '12b6c0bd-ba01-4e38-b28d-a957aa7331d8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016986C44C50>]}
+[0m16:03:58.419795 [info ] [Thread-4 (]: 3 of 3 OK created sql incremental model analytics.int_instance_hourly_costs .... [[32mSELECT 72000[0m in 0.17s]
+[0m16:03:58.420803 [debug] [Thread-4 (]: Finished running node model.compute_iq.int_instance_hourly_costs
+[0m16:03:58.422915 [debug] [MainThread]: On master: COMMIT
+[0m16:03:58.423941 [debug] [MainThread]: Using postgres connection "master"
+[0m16:03:58.423941 [debug] [MainThread]: On master: COMMIT
+[0m16:03:58.423941 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:03:58.438989 [debug] [MainThread]: SQL status: COMMIT in 0.014 seconds
+[0m16:03:58.439525 [debug] [MainThread]: On master: Close
+[0m16:03:58.440048 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:03:58.440557 [debug] [MainThread]: Connection 'list_computeiq' was properly closed.
+[0m16:03:58.441085 [debug] [MainThread]: Connection 'list_computeiq_analytics' was properly closed.
+[0m16:03:58.441085 [debug] [MainThread]: Connection 'model.compute_iq.stg_instance_metrics' was properly closed.
+[0m16:03:58.441609 [debug] [MainThread]: Connection 'model.compute_iq.stg_instances' was properly closed.
+[0m16:03:58.442128 [debug] [MainThread]: Connection 'model.compute_iq.int_instance_hourly_costs' was properly closed.
+[0m16:03:58.442128 [info ] [MainThread]: 
+[0m16:03:58.443227 [info ] [MainThread]: Finished running 1 incremental model, 2 view models in 0 hours 0 minutes and 0.54 seconds (0.54s).
+[0m16:03:58.444274 [debug] [MainThread]: Command end result
+[0m16:03:58.484900 [debug] [MainThread]: Wrote artifact WritableManifest to dbt_project\target\manifest.json
+[0m16:03:58.487932 [debug] [MainThread]: Wrote artifact SemanticManifest to dbt_project\target\semantic_manifest.json
+[0m16:03:58.490188 [debug] [MainThread]: Wrote artifact OsiDocument to dbt_project\target\osi_document.json
+[0m16:03:58.497968 [debug] [MainThread]: Wrote artifact RunExecutionResult to dbt_project\target\run_results.json
+[0m16:03:58.497968 [info ] [MainThread]: 
+[0m16:03:58.498971 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:03:58.499969 [info ] [MainThread]: 
+[0m16:03:58.499969 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m16:03:58.500969 [debug] [MainThread]: Command `dbt run` succeeded at 16:03:58.500969 after 2.11 seconds
+[0m16:03:58.501799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016985F4E9C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016985EF6930>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016983DE5AC0>]}
+[0m16:03:58.501799 [debug] [MainThread]: Flushing usage events
+[0m16:03:59.295203 [debug] [MainThread]: An error was encountered while trying to flush usage events
