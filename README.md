@@ -135,6 +135,9 @@ Planned improvements include:
 - Pipeline observability and automated testing
 - Performance and scalability evaluation
 
+<img width="1908" height="898" alt="image" src="https://github.com/user-attachments/assets/e8c92a35-f338-42b8-9736-2d6b0b1e9ef1" />
+
+
 ## 💡 Motivation
 
 This project explores the intersection of data engineering, analytics engineering, and cloud infrastructure efficiency, with an emphasis on reliable data pipelines, meaningful infrastructure metrics, and scalable system design.
